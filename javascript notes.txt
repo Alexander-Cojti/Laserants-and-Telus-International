@@ -1,0 +1,32 @@
+// function saludar(){console.log('Hola mundo')}
+// let intervalo = setInterval(saludar, 1000)
+// // id del proceso imprime Hola mundo cada segundo en consola
+// clearInterval(2)
+
+// let numero = 1;
+// typeof numero
+
+// let persona = {nombre='Juan', edad=20}
+// persona.edad
+
+// persona.direccion='ciudad'
+
+// let arreglo=[1,2,3,4,'hola','mundo']
+
+// arreglo[3]
+
+// texto = 'uno'
+// texto == 'uno'
+// texto < 1
+// texto > 1
+// texto != 1
+
+// Windows Terminal
+// Install-Module oh-my-posh -Scope CurrentUser
+
+
+// code $profile
+
+// Set-PoshPrompt -Theme space
+
+// complete windows compatible
