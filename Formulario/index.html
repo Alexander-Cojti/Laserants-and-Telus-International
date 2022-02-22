@@ -18,13 +18,11 @@
             <label for="cantidad">Cantidad</label>
             <input type="number" name="cantidad" id="cantidad">id</input>
         </div>
-
         <div>
             <label for="precio">Precio</label>
             <input type="number" name="precio" id="precio">id</input>
         </div>
         <div>
-
             <label for="categoria">Categoria</label>
             <select type="text" name="categoria" id="categoria">
                 <option value="1">1</option>
@@ -37,6 +35,40 @@
             <button type="submit">Enviar</button>
         </div>
     </form>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Codigo</td>
+                <td>Nombre</td>
+                <td>Cantidad</td>
+                <td>Precio</td>
+                <td>Total</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Camisa</td>
+                <td>10</td>
+                <td>100</td>
+                <td>10000</td>
+                <td><a href="#">Editar</a> <a href="#">Eliminar</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Totales:</td>
+                <td>10</td>
+                <td>100</td>
+                <td>1000</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
 </body>
 
 </html>
