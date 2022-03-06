@@ -67,7 +67,15 @@ function onSubmit(event) {
     <td>${precio}</td>
     <td>${categoria}</td>
     <td>${total}</td>
-    <td><a href="#" onCLick=onEdit(event)>Editar</a><a href="#" onCLick=onDelete(event)>Eliminar</a></td>
+    <td>
+    <div class="btn-group">
+    <a title="Editar" href="#" onCLick=onEdit(event) class="btn btn-sm btn-outline-secondary">
+    <i class="bi bi-pencil-square"></i>
+    </a> 
+    <a title="Eliminar" href="#" onCLick=onDelete(event) class="btn btn-sm btn-outline-danger" >
+    <i class="bi bi-trash"></i>
+    </a></td>
+    </div>
     `;
 
 
@@ -82,8 +90,9 @@ function onSubmit(event) {
 function onEdit(event) {
     event.preventDefault();
     /** @type {HTMLElement} */
-    const anchor = event.target;
-    const tr = anchor.parentElement.parentElement;
+    // const anchor = event.target;
+    const anchor = event.currentTarget;
+    const tr = anchor.parentElement.parentElement.parentElement;
 
     const celdas = tr.getElementsByTagName("td");
     const [tdCodigo, tdNombre, tdCantidad, tdPrecio] = celdas;
@@ -101,8 +110,8 @@ function onEdit(event) {
 function onDelete(event) {
     event.preventDefault();
     /** @type {HTMLElement} */
-    const anchor = event.target;
-    const tr = anchor.parentElement.parentElement;
+    const anchor = event.currentTarget;
+    const tr = anchor.parentElement.parentElement.parentElement;
 
     tbody.removeChild(tr);
     console.log("deleted")
