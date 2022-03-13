@@ -81,7 +81,6 @@ const unsuscribe = store.subscribe(() => {
         renderFormProducto(currentState.producto);
         renderTableProductos(currentState.productos);
     }
-    console.log(currentState);
 });
 
 function renderFormProducto(producto) {
