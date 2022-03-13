@@ -14,37 +14,15 @@ const unsuscribe = store.subscribe(() => {
     }
 });
 
-ui.onFormSubmit = (payload) => {
-    if (payload.codigo) {
-        store.dispatch({
-            type: "producto-modificado",
-            payload
-        });
+ui.onFormSubmit = (producto) => {
+    if (producto.codigo) {
+        store.dispatch(productoModificado(producto));
     }
     else {
-        store.dispatch({
-            type: "producto-agregado",
-            payload
-        });
+        store.dispatch(productoAgregado(producto));
     }
-    store.dispatch({
-        type: "producto-seleccionado",
-        payload: {
-            codigo: null
-        }
-    });
+    store.dispatch(productoSeleccionado(null));
 }
 
-ui.OnEliminarClick = (codigo) => {
-    store.dispatch({
-        type: "producto-eliminado",
-        payload: { codigo }
-    });
-}
-
-ui.OnEditarClick = (codigo) => {
-    store.dispatch({
-        type: "producto-seleccionado",
-        payload: { codigo }
-    });
-}
+ui.OnEliminarClick = (codigo) =>  store.dispatch(productoEliminado(codigo));
+ui.OnEditarClick = (codigo) => store.dispatch(productoStore.productoSeleccionado(codigo));
